@@ -7,8 +7,10 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
         message.delete();
+        
+        const userID = "471988330335174667"
 
-        if (!message.member.hasPermission("MANAGE_MESSAGES"))
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) || if message.author === userID
             return message.reply("You don't have the required permissions to use this command.").then(m => m.delete(5000));
 
         if (args.length < 0)
