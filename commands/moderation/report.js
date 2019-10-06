@@ -22,9 +22,12 @@ module.exports = {
         
         const channel = message.guild.channels.find(c => c.name === "reports")
             
-        if (!channel)
-            return message.channel.send("Couldn't find a `#reports` channel").then(m => m.delete(5000));
-
+        if (!channel){
+            try{
+      channel = await message.guild.createChannel({
+        name: "reports"
+      });
+                
         const embed = new RichEmbed()
             .setColor("#ff0000")
             .setTimestamp()
