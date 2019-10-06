@@ -36,5 +36,6 @@ module.exports = {
             **> Reason:** ${args.slice(1).join(" ")}`);
 
         return channel.send(embed);
+        return message.reply("Successfully reported ${rMember}");
     }
 }
