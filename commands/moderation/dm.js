@@ -7,7 +7,7 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
         
-        if(message.member.hasPermission(["SEND_MESSAGES"])){
+        if(message.member.hasPermission(["ADMINISTRATOR"])){
         
     message.delete()
 
