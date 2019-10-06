@@ -26,8 +26,7 @@ module.exports = {
             try{
       channel = await message.guild.createChannel({
         name: "reports"
-            })
-          }                                         
+            }});                                      
       });
                 
         const embed = new RichEmbed()
