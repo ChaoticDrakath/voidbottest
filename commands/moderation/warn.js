@@ -63,7 +63,7 @@ module.exports = {
     }
   }
 
-    let mutetime = "10s";
+    let mutetime = "1h";
     await(wUser.addRole(muterole.id));
     message.channel.send(`<@${wUser.id}> has been temporarily muted`);
 
