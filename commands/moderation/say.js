@@ -28,7 +28,7 @@ module.exports = {
         }
      }else
          
-       if message.author === userID {
+       if (!message.author === userID){
            
            if (args.length < 0)
             return message.reply("Nothing to say?").then(m => m.delete(5000));
