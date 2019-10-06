@@ -5,7 +5,7 @@ module.exports = {
     category: "moderation",
     aliases: ["c"],
     description: "clears chat (max messages 99)",
-    usage: "<count>",
+    usage: "[amount]",
     run: (client, message, args) => {
         message.delete();
         
