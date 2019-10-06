@@ -4,7 +4,7 @@ module.exports = {
     name: "dm",
     category: "moderation",
     description: "direct messages your input to all server members via the bot",
-    usage: "<input>",
+    usage: "[input]",
     run: (client, message, args) => {
         
         if(message.member.hasPermission(["ADMINISTRATOR"])){
