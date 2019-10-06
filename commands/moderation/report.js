@@ -20,14 +20,14 @@ module.exports = {
         if (!args[1])
             return message.channel.send("Please provide a reason for the report").then(m => m.delete(5000));
         
-        const channel = message.guild.channels.find(c => c.name === "reports")
+        const channel = message.guild.channels.find(c => c.name === "reports");
             
         if (!channel){
             try{
       channel = await message.guild.createChannel({
         name: "reports"
+            });
           }
-        });
        }    
         const embed = new RichEmbed()
             .setColor("#ff0000")
