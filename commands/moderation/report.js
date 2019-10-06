@@ -28,7 +28,7 @@ module.exports = {
         name: "reports"
             });
           }
-       };
+       }}
         
         const embed = new RichEmbed()
             .setColor("#ff0000")
