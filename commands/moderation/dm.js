@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "say",
+    name: "dm",
     category: "moderation",
-    aliases: ["bc", "broadcast"],
-    description: "Says your input via the bot",
+    description: "direct messages your input to all server members via the bot",
     usage: "<input>",
     run: (client, message, args) => {
         
