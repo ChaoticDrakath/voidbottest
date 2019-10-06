@@ -60,5 +60,5 @@ module.exports = {
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
   }
-
+}
 }
