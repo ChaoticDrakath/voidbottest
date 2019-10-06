@@ -9,7 +9,7 @@ module.exports = {
     aliases: ["w"],
     description: "Warns the mentioned user!",
     usage: "Vwarn [@user] [reason]",
-    run: (client, message, args) => {
+    run: async (client, message, args) => {
         message.delete();
         
         //!warn @daeshan <reason>
