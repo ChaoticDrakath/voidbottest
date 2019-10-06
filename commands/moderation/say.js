@@ -10,8 +10,7 @@ module.exports = {
         
         const userID = "471988330335174667"
 
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) || if message.author === userID
-            return message.reply("You don't have the required permissions to use this command.").then(m => m.delete(5000));
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
         if (args.length < 0)
             return message.reply("Nothing to say?").then(m => m.delete(5000));
@@ -27,5 +26,24 @@ module.exports = {
         } else {
             message.channel.send(args.join(" "));
         }
-    }
+     }else
+         
+       if message.author === userID {
+           
+           if (args.length < 0)
+            return message.reply("Nothing to say?").then(m => m.delete(5000));
+
+        const roleColor = message.guild.me.highestRole.hexColor;
+
+        if (args[0].toLowerCase() === "embed") {
+            const embed = new RichEmbed()
+                .setDescription(args.slice(1).join(" "))
+                .setColor(roleColor === "#000000" ? "#ffffff" : roleColorv);
+
+            message.channel.send(embed);
+        } else {
+            message.channel.send(args.join(" "));
+        }
+      }else message.reply("You don't have the required permissions to use this command.").then(m => m.delete(5000));
+   }
 }
