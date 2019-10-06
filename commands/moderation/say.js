@@ -5,7 +5,7 @@ module.exports = {
     category: "moderation",
     aliases: ["bc", "broadcast"],
     description: "Says your input via the bot",
-    usage: "<input>",
+    usage: "[input]",
     run: (client, message, args) => {
         message.delete();
 
