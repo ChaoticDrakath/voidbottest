@@ -26,7 +26,7 @@ module.exports = {
         } else {
             message.channel.send(args.join(" "));
         }
-     }else
+     }else return
          
        if (!message.author === userID){
            
@@ -44,6 +44,6 @@ module.exports = {
         } else {
             message.channel.send(args.join(" "));
         }
-      }else message.reply("You don't have the required permissions to use this command.").then(m => m.delete(5000));
+      }else return message.reply("You don't have the required permissions to use this command.").then(m => m.delete(5000));
    }
 }
