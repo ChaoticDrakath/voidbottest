@@ -5,7 +5,7 @@ module.exports = {
     name: "report",
     category: "moderation",
     description: "Reports a member",
-    usage: "[mention, id] [report]",
+    usage: "[mention | id] [report]",
     run: async (client, message, args) => {
         if (message.deletable) message.delete();
 
