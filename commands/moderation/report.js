@@ -26,9 +26,9 @@ module.exports = {
             try{
       channel = await message.guild.createChannel({
         name: "reports"
-            }});                                      
-      });
-                
+          }
+        });
+       }    
         const embed = new RichEmbed()
             .setColor("#ff0000")
             .setTimestamp()
